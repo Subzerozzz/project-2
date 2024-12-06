@@ -1,0 +1,117 @@
+extends ../layouts/default.pug
+include ../mixins/breadcrumb.pug
+include ../mixins/box-head.pug
+include ../mixins/product-item.pug 
+
+block title 
+    title Chi tiết sản phẩm 
+
+block main 
+    -
+        var list = [
+            {
+                title:"Trang chủ",
+                link :"#"
+            },
+            {
+                title:"Chó",
+                link :"#"
+            },
+            {
+                title:"Chó con",
+                link :"#"
+            },
+            {
+                title:"Shiba Inu Màu Nâu Đỏ",
+                link :"#"
+            }
+        ]
+    //- Section 5
+    .section-5 
+        .container
+            .section-5__wrap 
+                .section-5__left 
+                    .section-5__image 
+                        .section-5__image-main 
+                            img(src="assets/images/section-5_image-main.jpg", alt="")
+                        .section-5__image-list 
+                            .section-5__image-item 
+                                img(src="assets/images/section-5_image-main.jpg", alt="")
+                            .section-5__image-item 
+                                img(src="assets/images/section-5-image-1.jpg", alt="")
+                            .section-5__image-item 
+                                img(src="assets/images/section-5-image-2.jpg", alt="")
+                            .section-5__image-item 
+                                img(src="assets/images/section-5-image-3.jpg", alt="")
+                            .section-5__image-item 
+                                img(src="assets/images/section-5-image-4.jpg", alt="")
+                .section-5__right
+                    +breadcrumb(list)
+                    h2.section-5__title Shiba Inu Màu Nâu Đỏ
+                    div.section-5__price 12.000.000 VND 
+                    .section-5__buttons
+                        div.button Liên hệ
+                        div.button.button--outline 
+                            img(src="assets//images/Chat.svg", alt="")
+                            |Chat với Monito
+                    .section-5__info
+                        .section-5__item 
+                            .section-5__desc SKU 
+                            .section-5__value #1000078
+                        .section-5__item 
+                            .section-5__desc Giống
+                            .section-5__value Cái
+                        .section-5__item 
+                            .section-5__desc Tuổi
+                            .section-5__value 2 tháng
+                        .section-5__item 
+                            .section-5__desc Kích thước 
+                            .section-5__value Nhỏ
+                        .section-5__item 
+                            .section-5__desc Màu sắc 
+                            .section-5__value Nâu đỏ
+                        .section-5__item 
+                            .section-5__desc Mô tả ngắn 
+                            .section-5__value
+                                |Giống thuần chủng Shih Tzu. Cấu trúc cơ thể 
+                                |tốt. Với chứng chỉ MKA và Microchip. Cha từ 
+                                |dòng dõi vô địch.
+                    .section-5__contact 
+                        .section-5__share
+                            <i class="fa-solid fa-share-nodes"></i>
+                            p Chia sẻ:
+                        .section-5__socials 
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-youtube"></i>
+    //- End section 5
+
+    //- Section 6 
+    .section-6 
+        .container 
+            .section-6__wrap 
+                .section-6__head Khách hàng của chúng tôi 
+                .section-6__list 
+                    .section-6__item 
+                        img(src="assets/images/section6-1.jpg", alt="")
+                    .section-6__item 
+                        img(src="assets/images/section6-2.jpg", alt="")
+                    .section-6__item 
+                        img(src="assets/images/section6-3.jpg", alt="")
+                    .section-6__item 
+                        img(src="assets/images/section6-4.jpg", alt="")
+    //- End section 6
+
+    //- Section 7
+    .section-7 
+        .container 
+            .section-7__wrap 
+                +box-head("Có gì mới?", "Xem Thêm Chó Con" , "#" , "no")
+                .section-7__list 
+                    +product-item()
+                    +product-item()
+                    +product-item()
+                    +product-item()
+
+    //- End section 7 

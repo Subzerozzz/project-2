@@ -1,6 +1,6 @@
-mixin breadcrumb(list)
+mixin breadcrumb(list , className = "")
     nav.box-breadcrumb
-        .container 
+        div(class = className)
             ul.box-breadcrumb__list
                 each item in list 
                     li.box-breadcrumb__item 
